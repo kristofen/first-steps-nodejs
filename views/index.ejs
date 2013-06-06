@@ -1,0 +1,11 @@
+<% include common/head %>
+<% include common/menu %>
+<% if (!page.user) { %>
+	<h2>Welcome! Please log in.</h2>
+	<a href="/login">Go to login</a>
+<% } else { %>
+	<h2>Hello, <%= page.user.username %>.</h2>
+	<a href="/account">Go to account page</a>
+	<a href="/logout">Logout!</a>
+<% } %>
+<% include common/foot %>
